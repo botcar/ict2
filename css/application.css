@@ -1,3 +1,97 @@
+/* BOTCAR Specific */
+#header-content #logo {
+	position: absolute;	
+	font: normal 40px/65px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: -1px; 
+	color: #FFF;
+	background: #3F1204 url(images/logobg.jpg) repeat-x left top;
+	border: 1px solid #4E460F;
+	height: 65px;
+	padding: 0 10px;
+	margin: 0;
+	margin-left: 5px;
+	
+	/* change the values of left and top to adjust the position of the logo */
+	top: 18px; left: 10px;
+	background: repeat-x left top;		
+	border: 1px solid #A60;
+}
+
+#header-wrap {
+	height: 160px;
+	text-align: left;	
+	background: #FFF url(images/headerbg.jpg) repeat-x 0 0;			
+	background: #FFF url(images/DSC_6001.jpg) repeat-x 0 0;				
+	border: 1px solid #4E460F;
+	margin-bottom: 5px;
+
+}
+#header-content {
+	position: relative;
+	margin: 0 auto; 
+	padding: 0;
+}
+#header-content #logo a {
+	text-decoration: none;
+	color: #FFF;
+	background: transparent;
+}
+#header-content #slogan {
+	position: absolute;	
+	font: normal 12px 'Trebuchet MS', Tahoma, sans-serif;
+	letter-spacing: 0px;
+	color: #BBB;	 
+	margin: 0; padding: 0;
+	
+	/* change the values of left and top to adjust the position of the slogan */
+	top: 88px; left: 30px;
+}
+
+/* header menu */
+#header-content ul {
+	position: absolute;
+	right: 0px; top: 125px; 
+	font: bold 12px Georgia, "Times New Roman", Times, serif;
+	list-style: none;
+	margin: 0; padding: 0;		
+	text-transform: none;		
+}
+#header-content li {
+	display: inline;
+}
+#header-content li a {
+	float: left;
+	display: block;
+	padding: 0px 18px 7px 18px;	
+	color: #F3A251; 
+	text-decoration: none;
+}
+#header-content li a:hover {
+	color: #F88F26;
+}
+#header-content li a#current  {	
+	color: #FFF;	
+}
+
+#header-content #header-links {
+	position: absolute;
+	top: 5px; right:10px;	
+	color: #8E5F2F;
+	font-size: 90%;
+}
+#header-content #header-links P {
+	margin: 0; padding: 0;
+}
+#header-content #header-links a {	
+	color: #A4A4A4;
+	text-decoration: none;
+}
+#header-content #header-links a:hover {
+	color: #F3A251;
+}
+
+
+
 .app_hidden {
 	display: none;
 	visibility: hidden;

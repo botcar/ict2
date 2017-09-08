@@ -33,8 +33,8 @@ var useSuffix = localSuffix;
 var useLocal = false;
 var initialLoadDone = false;
 
-var imgUrn = "urn:cite2:hmt:vaimg.2017a:VA012RN_0013@0.208,0.2087,0.086,0.0225"
-var defaultUrn = "urn:cite2:hmt:vaimg.2017a:VA012RN_0013"
+var imgUrn = "urn:cite2:fufolio:botcar.2017a:Lord_HS158_213_2443@0.1103,0.5229,0.4507,0.05783"
+var defaultUrn = "urn:cite2:fufolio:botcar.2017a:Lord_HS158_213_2443"
 
 var roiArray = []
 
@@ -158,6 +158,16 @@ function getRemotePreview(roi){
 	$("#image_preview").attr("src",u);
 }
 
+function getFullResImage() {
+	var plainUrn = imgUrn.split("@")[0];
+	var imgId = plainUrn.split(":")[4];
+	var tempImagePath = getImagePathFromUrn(plainUrn);
+	// here
+	var linkUrl = serviceUrl + "OBJ=IIP,1.0&FIF=" + servicePath + tempImagePath + imgId + serviceSuffix + "&CVT=JPEG";
+	return linkUrl
+
+}
+
 
 
 /**
@@ -176,6 +186,15 @@ jQuery(function($){
 	}
 //	console.log("calling updateShare from jQuery")
 //	updateShareUrl();
+
+	// If someone is using local images, they don't need this.	
+	if (!useLocal) {
+		var fullRezUrl = getFullResImage(imgUrn)
+		var fru = "<a style='position: absolute; padding-right: 12px; right: 0;' href = '";
+		fru += fullRezUrl;
+		fru += "' target= '_blank' > Download Full Resolution Image</a > ";
+		$("#topRowBox").append(fru);
+	}
 
 	setUpUI()
 
